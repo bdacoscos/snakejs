@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#startScreen {
+	font-family: 'Luckiest Guy', cursive;
+	color: white;
+	text-align: center;
+	
+	position: absolute;
+	visibility: visible;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#game-screen {
+	display: block;
+
+}
+
+#gameOver, #playHUD {
+	position: absolute;
+	visibility: hidden;
+}
+
+h1, h2, h3 {
+	font-family: 'Luckiest Guy', cursive;
+	color: white;
+	text-align: center;
+}
+
+#startTitle, .title {
+	font-size: 100px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#restartButton, #startButton {
+	border: 2px solid white;
+	border-radius: 10px;
+}
+
+#restartButton, #startButton:hover {
+	background-color: #009900;
+}
+
+#scoreboard {
+	margin: 5px;
+}
