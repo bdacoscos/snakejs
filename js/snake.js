@@ -71,8 +71,9 @@ function gameInitialize() {
 
 function gameLoop() {
 	gameDraw();
-	drawScoreboard();
+
 	if(gameState == "PLAY") {
+		drawScoreboard();
 		snakeUpdate();
 		snakeDraw();
 		foodDraw();
@@ -110,10 +111,21 @@ function snakeInitialize() {
 	}
 }
 
+/* **************************************************************************************************
+	HERE!!! Trying to alternate color of snake head!!
+   **************************************************************************************************
+*/
+
 function snakeDraw() {
 	for(var index = 0; index < snake.length; index++) {
-		context.fillStyle = "white";
-		context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize); 
+		if (i % 2 == 0) {
+			context.fillStyle = "black";
+			context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
+		}
+		else {
+			context.fillStyle = "white";
+			context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
+		}
 	}
 }
 
