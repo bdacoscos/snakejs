@@ -26,7 +26,7 @@ var scoreboard;
  */
 
 startScreen();
-setInterval(gameLoop, 100/2);
+setInterval(gameLoop, 200/2);
 
 /* -------------------------------------------------------------
  * Game functions
@@ -100,7 +100,7 @@ function gameRestart() {
 function snakeInitialize() {
 	snake = [];
 	snakeLength = 1; 
-	snakeSize = 20;
+	snakeSize = 45;
 	snakeDirection = "down"; 
 
 	for(var index = snakeLength - 1; index >= 0; index--) {
@@ -117,16 +117,12 @@ function snakeInitialize() {
 */
 
 function snakeDraw() {
-	for(var index = 0; index < snake.length; index++) {
-		if (i % 2 == 0) {
-			context.fillStyle = "black";
+	for (var index = 0; index < snake.length; index++) {
+		for (var j = 0; j < snake.length; j++) {
+			context.fillStyle = 'rgb(' + Math.floor(255-12.5 * index) + ',' + Math.floor(255-2.5 * j) + ', 0)';
 			context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
 		}
-		else {
-			context.fillStyle = "white";
-			context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
-		}
-	}
+	}   
 }
 
 function snakeUpdate() {
