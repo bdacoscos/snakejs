@@ -119,7 +119,7 @@ function snakeInitialize() {
 function snakeDraw() {
 	for (var index = 0; index < snake.length; index++) {
 		for (var j = 0; j < snake.length; j++) {
-			context.fillStyle = 'rgb(' + Math.floor(255-12.5 * index) + ',' + Math.floor(255-2.5 * j) + ', 0)';
+			context.fillStyle = 'rgb(' + Math.floor(255-28.5 * index) + ',' + Math.floor(255-1.5 * j) + ', 0)';
 			context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
 		}
 	}   
